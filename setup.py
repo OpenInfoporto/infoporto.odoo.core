@@ -5,7 +5,7 @@ This module contains the tool of infoporto.odoo.core
 import os
 from setuptools import setup, find_packages
 
-version = '1.0'
+version = '0.1'
 setup(name='infoporto.odoo.core',
       version=version,
       description="Odoo core",
