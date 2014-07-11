@@ -1,0 +1,32 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="infoporto.odoo.core">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Odoo"
+      directory="profiles/default"
+      description="Odoo core"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <browser:page
+      name="odoo-settings"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.OdooSettingsControlPanel"
+      permission="cmf.ManagePortal"
+      />
+
+
+  <browser:page
+    name="odoo_test_view"
+    for="*"
+    permission="zope2.View"
+    class=".odoo.TestView"
+    />
+
+</configure>
